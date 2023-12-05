@@ -1,12 +1,16 @@
 
-<div>
+<div class="text-center" >
   <h2>Random</h2>
-  <img [src]="img" alt="">
+  <div class="d-flex justify-content-center">
+    <img  [src]="img" alt="">
+  </div>
+
   <h3>{{title}} </h3>
   <p>{{price}} </p>
+  <button class="btn btn-primary" (click)="addToCartHarndler() ">Add to cart</button>
 </div>
 <div>
-  <h2>Padrejhagsd</h2>
+  <h2>Grid desde el padre</h2>
   <img [src]="imgpadre" alt="">
   <h3>{{title}} </h3>
   <p>{{price}} </p>
