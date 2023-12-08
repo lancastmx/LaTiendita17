@@ -2,7 +2,7 @@
   <input type="number" [value]="duration()" (change)="changeDuration($event)">
 </p>
 <p>
-  <input type="number" [value]="messenger()" (change)="changeMessenger($event)">
+  <input type="string" [value]="messenger()" (change)="changeMessenger($event)">
 </p>
 <p>
   <app-counter [duration]="duration()" [messenger]="messenger()" />

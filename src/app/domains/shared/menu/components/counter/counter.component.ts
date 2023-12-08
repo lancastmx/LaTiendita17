@@ -21,4 +21,16 @@ export class CounterComponent {
     console.log(changes);
   }
 
+  ngOnInit(){
+    console.log('ngOnInit');
+    console.log('-'.repeat(10));
+    console.log('duration =>', this.duration);
+    console.log('messenger =>', this.messenger);
+  }
+
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit');
+    console.log('-'.repeat(10));
+  }
+
 }
