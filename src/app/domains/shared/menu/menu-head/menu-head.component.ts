@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-menu-head',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './menu-head.component.css'
 })
 export class MenuHeadComponent {
+  hideSideMenu = signal(true);
+
+  toogleSindeMenu() {
+    this.hideSideMenu.update(prevState => !prevState);
+  }
 
 }
