@@ -21,4 +21,6 @@ export class AboutComponent {
     this.messenger.set(input.value)
   }
 
+
+
 }
