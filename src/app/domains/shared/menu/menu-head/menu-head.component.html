@@ -40,7 +40,8 @@
       </ul>
     </div>
     <div class="flex items-center">
-      <button class="px-4" (click)="toogleSindeMenu()">
+      <button class="p-2 border rounded relative" (click)="toogleSindeMenu()">
+        <div class="absolute -top-4 -left-4 rounded h5 w-5 bg-black text-white"> {{cart.length}} </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -81,5 +82,11 @@
         />
       </svg>
     </button>
+  </div>
+  <div>
+    <div *ngFor="let product of cart">
+      <p>{{product.title}} </p>
+      <p>{{product.price}} </p>
+    </div>
   </div>
 </div>

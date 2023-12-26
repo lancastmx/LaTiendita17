@@ -5,7 +5,7 @@ import { Product } from '../../../shared/models/product.model';
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
@@ -15,7 +15,6 @@ export class ProductComponent {
 
  @Output() addToCart = new EventEmitter();
  addToCartHarndler() {
-  console.log('click form child');
-  this.addToCart.emit('Hola, estes es un mensaje desde el hijo ' + this.product.title);
+  this.addToCart.emit(this.product);
  }
 }
