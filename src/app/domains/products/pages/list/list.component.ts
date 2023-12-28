@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ProductComponent } from '../../../products/components/product/product.component'
 import { MenuHeadComponent } from './../../../shared/menu/menu-head/menu-head.component'
 import { Product } from '../../../shared/models/product.model'
-import {signal} from '@angular/core';
+
 @Component({
   selector: 'app-list',
   standalone: true,
@@ -71,6 +71,8 @@ export class ListComponent {
 
    addToCart(product: Product){
     this.cart.update(prevState => [...prevState, product]);
+
+    console.log(this.cart.length)
    }
 
 }
